@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-auth-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "A NodeJS server application. This is a template for a proxy which stores a client secret for authenticating with OAuth2, which can be used by SPAs.",
+  "homepage": "https://github.com/darylbuckle/nodejs-auth-proxy",
+  "keywords": ["nodejs", "proxy", "authentication", "client secret", "oauth2"],
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "rotating-file-stream": "^2.1.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "heroku-create": "heroku create",
+    "heroku-push": "git push heroku master",
+    "heroku-scale-1": "heroku ps:scale web=1",
+    "heroku-scale-0": "heroku ps:scale web=0"
+  }
+}
